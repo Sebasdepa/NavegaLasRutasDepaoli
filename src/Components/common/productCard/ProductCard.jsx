@@ -1,3 +1,5 @@
+import { Link} from "react-router-dom";
+
 const ProductCard = ({ product }) => {
     return (
       <div
@@ -20,7 +22,7 @@ const ProductCard = ({ product }) => {
         />
         <p>{product.description}</p>
         <p>{product.price}</p>
-        <button>Ver detalle</button>
+        <Link to={`/itemDetail/${product.id}`}> Ver detalle </Link>
       </div>
     );
   };

@@ -7,7 +7,7 @@ export const products = [
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam blanditiis officia dignissimos! Expedita quod voluptatem molestias id maxime explicabo ipsa.",
       price: 1999.99,
-      category: "Viento",
+      category: "viento",
     },
     {
       id: 2,
@@ -17,7 +17,7 @@ export const products = [
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam blanditiis officia dignissimos! Expedita quod voluptatem molestias id maxime explicabo ipsa.",
       price: 1290.90,
-      category: "Cuerdas",
+      category: "cuerdas",
     },
     {
       id: 3,
@@ -27,7 +27,7 @@ export const products = [
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam blanditiis officia dignissimos! Expedita quod voluptatem molestias id maxime explicabo ipsa.",
       price: 790.99,
-      category: "Cuerdas",
+      category: "cuerdas",
     },
     {
       id: 4,
@@ -37,7 +37,7 @@ export const products = [
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam blanditiis officia dignissimos! Expedita quod voluptatem molestias id maxime explicabo ipsa.",
       price: 5700.90,
-      category: "Viento",
+      category: "viento",
     },
     {
       id: 5,
@@ -47,7 +47,7 @@ export const products = [
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam blanditiis officia dignissimos! Expedita quod voluptatem molestias id maxime explicabo ipsa.",
       price: 399.99,
-      category: "Cuerdas",
+      category: "cuerdas",
     },
   ];
   

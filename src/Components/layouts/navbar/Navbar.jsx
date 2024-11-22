@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom" 
 import CartWidget from '../../common/cartWidget/CartWidget';
 
 const Navbar = () => {
@@ -11,14 +12,19 @@ const Navbar = () => {
         backgroundColor: "PaleGreen",
       }}
     >
-      <img src="/asset/img/logoguitarra.png" alt="Logo" 
+    <Link to="/">
+    <img
+      src="/asset/img/logoguitarra.png"
+      alt="Logo"
       style={{
-            height: "50px", 
-            width: "50px", 
-            borderRadius: "10px", 
-            boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)"
-        }} 
-    /> 
+        height: "50px",
+        width: "50px",
+        borderRadius: "10px",
+        boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+      }}
+    />
+    </Link>
+
 
       <ul
         style={{
@@ -27,9 +33,8 @@ const Navbar = () => {
           gap: "20px",
         }}
       >
-        <li>Todos</li>
-        <li>Viento</li>
-        <li>Cuerdas</li>
+        <Link to="category/viento">Viento</Link>
+        <Link to="category/cuerdas">Cuerdas</Link>
       </ul>
       <CartWidget />
     </div>

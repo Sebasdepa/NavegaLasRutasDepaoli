@@ -21,8 +21,3 @@ function App() {
 }
 
 export default App;
-
-
-// La app no me renderiza, pero tampoco me muestra un error.. use como base el codigo de las clases.
-// Cuando arranque a implemetar las rutas con React-Router la pagina quedo en blanco y no supe como solucionarlo.
-//
