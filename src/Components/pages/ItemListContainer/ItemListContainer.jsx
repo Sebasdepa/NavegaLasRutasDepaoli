@@ -1,8 +1,9 @@
 import { useEffect } from "react";
 import { useState } from "react";
-import { products } from "../../../products";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
+import { db } from "../../../firebaseConfig";
+import { collection, addDoc, getDocs, query, where } from "firebase/firestore";
 
 const ItemListContainer = () => {
   const [myProducts, setMyProducts] = useState([]);
@@ -10,22 +11,29 @@ const ItemListContainer = () => {
   const { name } = useParams();
 
   useEffect(() => {
-    let productoFiltrados = products.filter((el) => el.category === name);
+    const productsCollection = collection(db, "products");
+    let refCollection = productsCollection
+    if(name){
+      const productsCollectionFiltered = query( 
+        productsCollection, 
+        where( "category", "==", name )
+      );
+      refCollection = productsCollectionFiltered
+    }
 
-    let task = new Promise((res) => {
-      res(name ? productoFiltrados : products);
-    });
-    task
-      .then((resp) => {
-        setMyProducts(resp);
-      })
-      .catch((error) => {
-        console.log(error);
-      })
-      .finally(() => {
-        console.log("Finally");
+
+    const getProducts = getDocs(refCollection);
+    getProducts.then((res) => {
+      let products = res.docs.map((elemento) => {
+        return { ...elemento.data(), id: elemento.id};
       });
+      setMyProducts(products);
+    });
   }, [ name ]);
+
+    
+  
+
   return <ItemList myProducts={myProducts} />;
 };
 
